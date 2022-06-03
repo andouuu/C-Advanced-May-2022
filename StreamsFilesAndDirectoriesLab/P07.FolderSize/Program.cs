@@ -1,38 +1,29 @@
 ﻿using System;
 using System.IO;
 
-namespace OddLines
-
+namespace FolderSize
 {
-    public class OddLines
+    public class FolderSize
     {
         static void Main()
         {
-            string inputFilePath = @"..\..\..\input.txt";
-            string outputFilePath = @"..\..\..\output.txt";
-            ExtractOddLines(inputFilePath, outputFilePath);
+            string folderPath = @"..\..\..\TestFolder";
+            string outputPath = @"..\..\..\output.txt";
+            GetFolderSize(folderPath, outputPath);
         }
-        public static void ExtractOddLines(string inputFilePath, string outputFilePath)
+        public static void GetFolderSize(string folderPath, string outputFilePath)
         {
             // TODO: write your code here… 
-            StreamReader readInput=new StreamReader(inputFilePath);
-            using (readInput)
+            double sum = 0;
+            DirectoryInfo dir= new DirectoryInfo(folderPath);
+            FileInfo[] files= dir.GetFiles("*",SearchOption.AllDirectories);
+            foreach (var fileInfo in files)
             {
-                int line =0;
-                StreamWriter writeOutput=new StreamWriter(outputFilePath);
-                using (writeOutput)
-                {
-                    if (readInput.ReadLine()==null)
-                        return;
-                    
-
-                    if (line%2==1)
-                        writeOutput.WriteLine(readInput.ReadLine());
-                    line++;
-                }
+                sum += fileInfo.Length;
             }
+
+            sum = sum / 1024 ;
+            File.WriteAllText(outputFilePath,sum.ToString() + " KB");
         }
-
     }
-
 }
