@@ -1,0 +1,70 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace CarManufacturer
+{ 
+    class Car
+    {
+        // TODO: define the Car class members here … 
+        private string make;
+        private string model;
+        private int year;
+        //make: string
+        //model: string
+        //year: int
+
+        //fuelQuantity: double
+        private double fuelQuantity;
+        //fuelConsumption: double
+        private double fuelConsumption;
+        public string Make
+        {
+            get { return this.make; }
+            set { this.make = value; }
+        }
+
+        public string Model
+        {
+            get { return this.model; }
+            set { this.model = value; }
+        }
+
+        public int Year
+        {
+            get { return this.year; }
+            set { year = value; }
+        }
+
+        public double FuelQuantity
+        {
+            get { return this.fuelQuantity; }
+            set { this.fuelQuantity = value; }
+        }
+
+        public double FuelConsumption
+        {
+            get { return this.fuelConsumption; }
+            set { this.fuelConsumption = value; }
+        }
+
+        public void Drive(double distance)
+        {
+            double fuelLeft = FuelQuantity - (FuelConsumption * distance);
+            if (fuelLeft<0)
+            {
+                Console.WriteLine("Not enough fuel to perform this trip!");
+            }
+            else
+            {
+                FuelQuantity -= (FuelConsumption * distance);
+            }
+        }
+
+        public string WhoAmI()
+        {
+            return $"Make: {this.Make}"+ "\r\n"+$"Model: {this.Model}" +$"\r\n"+$"Year: {this.Year}"+$"\r\n"+$"Fuel: {this.FuelQuantity:F2}";
+        }
+    }
+
+}
