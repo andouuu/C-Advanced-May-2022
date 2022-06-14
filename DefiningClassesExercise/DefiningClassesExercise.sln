@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P06.SpeedRacing", "P06.Spee
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P07.RawData", "P07.RawData\P07.RawData.csproj", "{66CC9910-EB29-48AF-ACC3-CD9EEE2BCBAB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P08.CarSalesman", "P08.CarSalesman\P08.CarSalesman.csproj", "{20DBE9A6-41C7-40E6-B889-EFA890441877}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{66CC9910-EB29-48AF-ACC3-CD9EEE2BCBAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66CC9910-EB29-48AF-ACC3-CD9EEE2BCBAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66CC9910-EB29-48AF-ACC3-CD9EEE2BCBAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20DBE9A6-41C7-40E6-B889-EFA890441877}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20DBE9A6-41C7-40E6-B889-EFA890441877}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20DBE9A6-41C7-40E6-B889-EFA890441877}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20DBE9A6-41C7-40E6-B889-EFA890441877}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
