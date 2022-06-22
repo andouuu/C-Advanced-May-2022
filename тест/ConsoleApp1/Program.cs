@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+
 
 namespace ConsoleApp1
 {
@@ -7,18 +9,29 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            int[] arr = Console.ReadLine().Split().Select(int.Parse).ToArray();
-            int i = int.Parse(Console.ReadLine());
-            int j = int.Parse(Console.ReadLine());
-            for (int k = i; k <= j; k++)
+            List<string> durjavi = Console.ReadLine().Split(",").ToList();
+            Console.WriteLine(string.Join(" ",durjavi));
+            int broi=0;
+            for (int i = 0; i < durjavi.Count; i++)
             {
-                int iSwap = arr[k];
-                arr[k] = arr[j];
-                arr[j] = iSwap;
-                j--;
+                if (durjavi[i][0]=='A')
+                {
+                    durjavi.Remove(durjavi[i]);
+                    broi++;
+                    i = -1;
+                }
             }
 
-            Console.WriteLine(string.Join(" ",arr));
+            if (broi==0)
+            {
+                Console.WriteLine("There are not a country beginning with 'A' in the list.");
+            }
+            else
+            {
+                Console.WriteLine(broi);
+            }
+
+            Console.WriteLine(string.Join(";",durjavi));
         }
     }
 }
