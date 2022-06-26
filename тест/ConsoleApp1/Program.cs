@@ -9,6 +9,7 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
+            
             List<string> durjavi = Console.ReadLine().Split(",").ToList();
             Console.WriteLine(string.Join(" ",durjavi));
             int broi=0;
